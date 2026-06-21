@@ -1,3 +1,4 @@
+import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 
 export default function App() {
@@ -9,9 +10,7 @@ export default function App() {
             {/* Main */}
             <div className="flex-1 min-w-0 flex flex-col">
                 {/* Header */}
-                <header className="h-14 border-b border-gray-200 flex items-center px-8">
-                    <p className="text-sm text-gray-400">Header</p>
-                </header>
+                <Header />
 
                 {/* Content */}
                 <main className="flex-1 px-8 py-8">
