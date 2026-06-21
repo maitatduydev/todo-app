@@ -1,22 +1,31 @@
-import type { SideLinkProps } from "../../types/sideLink";
+import type { ReactNode } from "react";
 
-export default function SideLink({ icon, label, badge, active, onClick }: SideLinkProps) {
+interface SideLinkProps {
+    icon: ReactNode;
+    label: string;
+    badge: number;
+    active: boolean;
+    onClick: () => void;
+}
+
+export function SideLink({ icon, label, badge, active, onClick }: SideLinkProps) {
     return (
         <button
             onClick={onClick}
-            className={`w-full cursor-pointer flex items-center justify-between px-2 py-1.5 rounded text-sm transition-colors ${
+            className={`w-full flex items-center justify-between px-2 py-1.5 rounded text-xs transition-colors ${
                 active
-                    ? "bg-black text-white"
-                    : "text-gray-500 hover:bg-gray-100 hover:text-black transition-colors"
+                    ? "bg-foreground text-background"
+                    : "text-muted-foreground hover:text-foreground hover:bg-accent"
             }`}
         >
-            <span className="flex items-center gap-3">
+            <span className="flex items-center gap-2">
                 {icon}
                 {label}
             </span>
             {badge > 0 && (
                 <span
-                    className={`text-[12px] font-semibold w-5.5 h-5.5 flex items-center justify-center rounded-full tabular-nums ${active ? "bg-white/20" : "bg-gray-200 text-gray-500"}`}
+                    className={`text-[10px] px-1.5 py-0.5 rounded-full tabular-nums ${active ? "bg-background/20 text-background" : "bg-border text-muted-foreground"}`}
+                    style={{ fontFamily: "'Geist Mono', monospace" }}
                 >
                     {badge}
                 </span>
