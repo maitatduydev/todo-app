@@ -2,7 +2,7 @@ export type Priority = "urgent" | "high" | "medium" | "low";
 export type Filter = "all" | "today" | "starred" | "completed" | string;
 export type SortKey = "createdAt" | "priority" | "dueDate" | "name";
 
-export interface ITodo {
+export interface Todo {
     id: string;
     text: string;
     note: string;
