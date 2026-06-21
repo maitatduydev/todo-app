@@ -142,8 +142,8 @@ export const INITIAL_TODOS: Todo[] = [
 ];
 
 export const SORT_OPTIONS: { key: SortKey; label: string }[] = [
-    { key: "createdAt", label: "Date created" },
-    { key: "priority", label: "Priority" },
-    { key: "dueDate", label: "Due date" },
-    { key: "name", label: "Name" },
+    { key: "createdAt", label: "Ngày khởi tạo" },
+    { key: "priority", label: "Độ ưu tiên" },
+    { key: "dueDate", label: "Ngày hết hạn" },
+    { key: "name", label: "Tên" },
 ];
