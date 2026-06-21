@@ -1,4 +1,4 @@
-import type { Priority, Todo } from "@/types/todo";
+import type { Priority, SortKey, Todo } from "@/types/todo";
 
 export const TAGS = ["Thiết kế", "Lập trình", "Đánh giá", "Hạ tầng", "Tài liệu", "Nghiên cứu"];
 
@@ -139,4 +139,11 @@ export const INITIAL_TODOS: Todo[] = [
         dueDate: "2026-06-25",
         createdAt: new Date("2026-06-12"),
     },
+];
+
+export const SORT_OPTIONS: { key: SortKey; label: string }[] = [
+    { key: "createdAt", label: "Date created" },
+    { key: "priority", label: "Priority" },
+    { key: "dueDate", label: "Due date" },
+    { key: "name", label: "Name" },
 ];
