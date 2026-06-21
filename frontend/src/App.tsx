@@ -1,10 +1,10 @@
+import Sidebar from "./components/Sidebar/Sidebar";
+
 export default function App() {
     return (
         <div className="min-h-screen bg-white flex">
             {/* Sidebar */}
-            <aside className="w-56 shrink-0 border-r border-gray-200 bg-gray-50 h-screen sticky top-0">
-                <p className="p-4 text-sm text-gray-400">Sidebar</p>
-            </aside>
+            <Sidebar />
 
             {/* Main */}
             <div className="flex-1 min-w-0 flex flex-col">
